@@ -1,0 +1,7 @@
+/* note to self about font sizes:  can change the root size with media queries and then, so long as I keep sizing everything in rems, all text will be automatically sized up and down.  brilliant! */
+
+@media (min-width: 960px) {
+  :root {
+    font-size: 125%;
+  }
+}

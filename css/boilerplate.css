@@ -74,3 +74,20 @@ a {
   --secondary-color: 
 }
 
+
+/* setting a standard text width */
+* {
+	max-inline-size: 60ch;
+}
+
+html,
+body,
+div,
+header,
+nav,
+main,
+footer,
+article,
+section {
+	max-inline-size: none;
+}

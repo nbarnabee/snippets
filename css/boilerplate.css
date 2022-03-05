@@ -76,8 +76,13 @@ a {
 
 
 /* setting a standard text width */
+
+:root {
+	--measure: 60ch;
+
+}
 * {
-	max-inline-size: 60ch;
+	max-inline-size: var(--root);
 }
 
 html,

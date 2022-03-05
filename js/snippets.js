@@ -1,11 +1,13 @@
 // Add an event listener to each item in a set of items
 
-const /*SET_NAME*/ = document.querySelectorAll("/*SETSELECTOR*/")
+const SETNAME = document.querySelectorAll("/*SETSELECTOR*/")
 
-Array.from(/*SET_NAME*/).forEach(element => element.addEventListener('click', /*FUNCTION_NAME*/))
+Array.from(SETNAME).forEach(element => element.addEventListener('click', FUNCTIONNAME))
 
-function /*FUNCTION_NAME*/(click) {...arguments.}
-//click.target
+function FUNCTIONNAME(click) {
+  ////click.target will point to the particular element that was clicked
+}
+
 
 
 // Pick a random element from an array

@@ -31,7 +31,7 @@ next step up = line height * line height * line height */
   --s-2: calc(var(--s-1) / var(--ratio));
   --s-1: calc(var(--s-0) / var(--ratio));
   --s-0: 1rem;
-  --s1: calc(var(--s0) * var(--ratio));
+  --s1: var(--ratio);
   --s2: calc(var(--s1) * var(--ratio));
   --s3: calc(var(--s2) * var(--ratio));
   --s4: calc(var(--s3) * var(--ratio));

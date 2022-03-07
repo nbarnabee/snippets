@@ -3,11 +3,10 @@ li {
 }
 
 .dropmenu {
-  position: relative;
   display: flex;
-  justify-content: start;
+  justify-content: end;
   align-items: center;
-  width: 100vw;
+  width: 100%;
   height: 80px;
   cursor: pointer;
   transition: all 0.5s ease-in-out;
@@ -16,6 +15,7 @@ li {
 .dropmenu-burger {
   width: 50px;
   height: 6px;
+  margin-right: min(30px, 2vw);
   background: black;
   border-radius: 5px;
   /* box-shadow: 0 2px 5px rgba(255, 101, 47, 0.2); */
@@ -61,14 +61,15 @@ li {
 
 .menu {
   display: none;
-  /* height: calc(100vh - 80px); */
   background: #222;
-  width: 250px;
+  /* width: 250px; */
 }
 
 .menu > ul {
   display: flex;
   flex-direction:column;
+  justify-content: center;
+  align-items: center;
   gap:10px;
   padding: 5vw 0;
 }

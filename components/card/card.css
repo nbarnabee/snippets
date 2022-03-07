@@ -1,19 +1,24 @@
 .card {
-  background-color: var(--white);
+  background-color: var(--color-light);
   width: min(90%, 300px);
-  margin: 150px auto;
+  margin: 20px auto;
   padding: min(4vw, 15px);
-  border-radius: 10px;
+  border: 1px solid var(--color-dark);
+  box-shadow: 0 2px 5px rgba(19, 18, 18, 0.2);
+}
+
+.card > * {
+  margin-inline: auto;
 }
 
 .card * + * {
   margin-top: 10px;
   text-align: center;
   width: 95%;
-  margin-inline: auto;
 }
 
 .card > img {
+  display: block;
   max-width: 100%;
-  border-radius: 5px;
+  width: 80%;
 }

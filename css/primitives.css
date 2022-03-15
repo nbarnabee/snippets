@@ -45,3 +45,20 @@ https://every-layout.dev */
   outline: 0.125 rem solid transparent;
   outline-offset: -0.125rem;
 }
+
+
+
+
+/*-------------  The Grid ---------------- */
+/*  Making a responsive grid that defaults to a single column on small screens, but grows to incorporate more columns as the screen size increases.  */
+
+.grid {
+  display: grid;
+  grid-gap: 1rem;
+}
+
+@supports (width: min(250px, 100%)) {
+  .grid {
+    grid-template-columns: repeat(auto-fit, minmax(min(250px, 100%), 1fr));
+  }
+}

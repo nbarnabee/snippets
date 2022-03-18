@@ -56,49 +56,45 @@ li {
 }
 
 
+/* ----- Navigation Menu -------- */
 
 .menu {
-  display: none;
-  background: #222;
+  position: absolute;
+  background: #000;
+  margin-left: -10px;
+  z-index: -1;
+  height: 100vh;
+  top: 0;
+  width: 0%;
+  transition: 0.5s;
+  overflow: hidden;
 }
 
-.menu > ul {
+.menu  .links {
   display: flex;
   flex-direction:column;
   justify-content: center;
   align-items: center;
   gap:10px;
-  padding: 5vw 0;
+  padding: 10vw 0;
 }
 
-.menu ul ul {
-  display:none;
-  padding-top:5px;
-}
+ .menu .links li a {
+   display: block;
+   padding:15px 14px;
+   text-decoration:none;
+   color:#FFF;
+   transition: 0.2s;
+ }
 
-.menu ul li {
-  position: relative;
-}
-
-.menu ul li.tab-info {
-  background:#111;
-  outline:1px inset #999;
-  border-radius:5px;
-}
 
 .menu .links li:hover a {
   transform: scale(1.4);
   transition: 0.2s;
 }
 
-.menu .links li a {
-  display: block;
-  padding:15px 14px;
-  text-decoration:none;
-  color:#FFF;
-  transition: 0.2s;
-}
-
 .menu.open {
   display: block;
+  width: min(50vw, 250px);
 }
+

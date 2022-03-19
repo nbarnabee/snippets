@@ -121,7 +121,7 @@ li {
 }
 
 * {
-	max-inline-size: var(--root);
+	max-inline-size: var(--measure);
 }
 
 html,

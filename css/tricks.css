@@ -39,3 +39,24 @@ next step up = line height * line height * line height */
 }
 
 /* could also consider using the so-called "golden ratio" of 1.618 */
+
+/* bar that appears underneath links when they're hovered over */
+
+.menu-link {
+  position: relative;
+}
+
+.menu-link::after {
+ content: "";
+ display: block;
+ height: 2px;
+ position: absolute;
+ width: 0;
+ background-color: white;
+ transition: 0.3s;
+}
+
+.menu-link:hover::after {
+  width: 100%;
+  transition: all linear 250ms;
+}

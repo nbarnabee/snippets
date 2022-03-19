@@ -17,8 +17,21 @@
   width: 95%;
 }
 
-.card > img {
+.card__img {
   display: block;
   max-width: 100%;
   width: 80%;
+}
+
+
+/* ---- And with the cards, a container ---- */ 
+
+.projects > .container {
+  width: 90%;
+  margin-inline: auto;
+  margin-top: var(--s1);
+  display: grid;
+  grid-gap: min(2vw, 2rem);
+  grid-template-columns: repeat(auto-fit, minmax(min(250px, 100%), 1fr));
+
 }

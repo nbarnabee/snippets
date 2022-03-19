@@ -1,7 +1,16 @@
-/* http://meyerweb.com/eric/tools/css/reset/ 
+/* ---- A spicy combination of...
+
+  http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
    License: none (public domain)
-*/
+
+and
+
+  Josh's Custom CSS Reset
+  https://www.joshwcomeau.com/css/custom-css-reset/
+
+-----------------------------------------------------  */
+
 
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
@@ -45,51 +54,37 @@ table {
 }
 
 
-/* ----------------  ALTERNATE/ENHANCEMENT --------------------*/
-/*
-  Josh's Custom CSS Reset
-  https://www.joshwcomeau.com/css/custom-css-reset/
-*/
 *, *::before, *::after {
   box-sizing: border-box;
 }
-* {
-  margin: 0;
-}
+
 html, body {
   height: 100%;
 }
+
 body {
   line-height: 1.5;
   -webkit-font-smoothing: antialiased;
+  scroll-behavior: smooth;
 }
-img, picture, video, canvas, svg {
+
+img, picture, video, canvas {
   display: block;
   max-width: 100%;
 }
+
 input, button, textarea, select {
   font: inherit;
 }
+
 p, h1, h2, h3, h4, h5, h6 {
   overflow-wrap: break-word;
 }
+
 #root, #__next {
   isolation: isolate;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-/* Clearfix */
 .clearfix::after {
   content: "";
   display: table;
@@ -98,40 +93,9 @@ p, h1, h2, h3, h4, h5, h6 {
 
 a {
   text-decoration: none;
+  color: inherit;
 }
-
 
 li {
 	list-style: none;
-}
-
-
-
-/* reminding myself how to set these */
-:root {
-  --primary-color:
-  --secondary-color: 
-}
-
-
-/* setting a standard text width */
-
-:root {
-	--measure: 60ch;
-}
-
-* {
-	max-inline-size: var(--measure);
-}
-
-html,
-body,
-div,
-header,
-nav,
-main,
-footer,
-article,
-section {
-	max-inline-size: none;
 }

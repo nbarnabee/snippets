@@ -7,26 +7,26 @@
   box-shadow: 0 2px 5px rgba(19, 18, 18, 0.2);
 }
 
-.card > * {
+.card>* {
   margin-inline: auto;
 }
 
-.card * + * {
+.card>*+* {
   margin-top: 10px;
   text-align: center;
   width: 95%;
 }
 
-.card__img {
+.card>img {
   display: block;
   max-width: 100%;
   width: 80%;
 }
 
 
-/* ---- And with the cards, a container ---- */ 
+/* ---- And with the cards, a container ---- */
 
-.projects > .container {
+.projects>.container {
   width: 90%;
   margin-inline: auto;
   margin-top: var(--s1);

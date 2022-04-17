@@ -13,8 +13,7 @@ function FUNCTIONNAME(click) {
 // Pick a random element from an array
 
 function randomElement(array) {
-  //generate a number between 0 and the length of the array - 1 (because the array's length will always be one greater than the index position of its final element)
-  let randomNum = Math.floor(Math.random() * (array.length - 1)); 
+  let randomNum = Math.floor(Math.random() * array.length); 
   console.log(`${randomNum}`);
   let randomArrayElement = array[randomNum];
   return randomArrayElement;

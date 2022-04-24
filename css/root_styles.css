@@ -40,17 +40,37 @@ next step up = line height * line height * line height */
 
 /* could also consider using the so-called "golden ratio" of 1.618 */
 
+/* or, for margin/padding sizes based on an 8 pt scale */
+
+:root {
+  --xs: 0.25rem;
+  --s: 0.5rem;
+  --m1: 1rem;
+  --m2: 1.5rem;
+  --m3: 2rem;
+  --l: 3rem;
+  --xl: 4rem;
+}
+
 
 /* setting a standard text width */
 
 :root {
-	--measure: 60ch;
+  --measure: 60ch;
 }
 
 * {
-	max-inline-size: var(--measure);
+  max-inline-size: var(--measure);
 }
 
-html, body, div, header, nav, main, footer, article, section {
-	max-inline-size: none;
+html,
+body,
+div,
+header,
+nav,
+main,
+footer,
+article,
+section {
+  max-inline-size: none;
 }

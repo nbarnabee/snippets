@@ -40,3 +40,22 @@ for (let i = 0; i<bobsFollowers.length; i++) {
   };
 }
 console.log(mutualFollowers);
+
+
+
+// This is not something to copy, just something that I should study to remind myself of how callback functions work
+
+const addTwo = num => {
+  return num + 2;
+}
+
+const checkConsistentOutput = (func, val) => {
+let checkA = val + 2;
+let checkB = func(val);
+if (checkA === checkB) {
+  return func(val)
+  }
+  else return 'inconsistent results';
+}
+
+console.log(checkConsistentOutput(addTwo, 2));

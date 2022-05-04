@@ -42,6 +42,11 @@ for (let i = 0; i<bobsFollowers.length; i++) {
 console.log(mutualFollowers);
 
 
+// comparing the values of two array and seeing whether all of the values in one array are contained in the other
+
+let containsAll = arr1.every(ele => arr2.includes(ele));
+
+
 
 // This is not something to copy, just something that I should study to remind myself of how callback functions work
 

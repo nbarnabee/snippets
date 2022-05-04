@@ -46,6 +46,26 @@ console.log(mutualFollowers);
 
 let containsAll = arr1.every(ele => arr2.includes(ele));
 
+// related, if you're looking for the values within an array of arrays
+
+function evaluateSet(set) {
+  for (i = 0; i < victorySets.length; i++) {
+    if (set.every(num => victorySets[i].includes(num)))
+    return true
+  }
+}
+
+// but the above only works if the set you're checking matches one of the target sets EXACTLY, e.g. with no extra numbers.
+
+function evaluateSet(set) {
+  for (i = 0; i < victorySets.length; i++) {
+    if (victorySets[i].every(num => set.includes(num)))
+    return true
+  }
+}
+
+// here's the solution from my tic-tac-toe game, which checks it the other way around, so if every number from one of the victory sets is included in the player set, then the player wins!
+
 
 
 // This is not something to copy, just something that I should study to remind myself of how callback functions work

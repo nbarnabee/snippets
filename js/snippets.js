@@ -43,3 +43,20 @@ function countDown(seconds) {
     else document.querySelector("h1").textContent = "Time's up!";
   }, 1000)
 }
+
+
+// something that I can't immediately think of a use for, but it sounds like a future codewars problem:  checking for two adjacent elements in an array whose sum = a certain figure:
+
+  function neighbourSumValue(arr, target) {
+  arr.some((a, i, arr) => {
+    x = arr[i];
+    y = arr[i+1];
+    return x+y==15
+  });
+  console.log(x, y);
+};
+
+// this tells you if a pair exists, though it won't tell you their value, like the above will
+function neighbourSumCheck(arr, target) {
+  return arr.some((a, i, arr) => arr[i] + arr[i+1] == target);
+}

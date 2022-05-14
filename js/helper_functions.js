@@ -48,7 +48,7 @@ const occurrenceCount = arr => arr.reduce((count, value) => {
 
 // and the MDN had a version that I like somewhat better
 
-function occurenceCount2(arr) {
+function occurrenceCount2(arr) {
   arr.reduce(function(totalCount, current) {
     if (current in totalCount) {
       totalCount[current]++

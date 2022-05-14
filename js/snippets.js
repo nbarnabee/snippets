@@ -29,3 +29,17 @@ if (checkA === checkB) {
 }
 
 console.log(checkConsistentOutput(addTwo, 2));
+
+
+
+// a simple countdown timer
+
+function countDown(seconds) {
+  setInterval(function () {
+    if (seconds >= 0) {
+      document.querySelector("h1").textContent = seconds;
+      seconds--;
+    }
+    else document.querySelector("h1").textContent = "Time's up!";
+  }, 1000)
+}

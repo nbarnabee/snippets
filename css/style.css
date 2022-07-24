@@ -33,3 +33,10 @@ button {
   text-transform: uppercase;
   font-size: 0.9rem;
 }
+
+/* Using <input type="search"> to make easy styling for a search bar */
+/* Obviously you need to link the proper image */
+
+input[type="search"]:after {
+  content: url("magnifying-glass.gif");
+}

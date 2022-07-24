@@ -1,4 +1,5 @@
 // Note that you will need Node for this
+// This is not using Express!
 
 // First we load up all the required Node modules
 const http = require("http");
@@ -11,8 +12,11 @@ const server = http.createServer((request, response) => {
   // If the requested url is just a forward slash, load index.html
   // Otherwise, the file is whatever was requested
 
-  let filePath = path.join(__dirname, "public", 
-  request.url === "/" ? "index.html" : request.url);
+  let filePath = path.join(
+    __dirname,
+    "public",
+    request.url === "/" ? "index.html" : request.url
+  );
 
   // Get the file extension so we can indicate which content type should be loaded
 
@@ -24,7 +28,7 @@ const server = http.createServer((request, response) => {
 
   // but here are our dynamic options
 
-  switch(extName) {
+  switch (extName) {
     case ".js":
       contentType = "text/javascript";
       break;
@@ -46,11 +50,11 @@ const server = http.createServer((request, response) => {
 
   fs.readFile(filePath, (err, content) => {
     // We'll do some basic error handling first
-    if(err) {
-      if(err.code === "ENOENT") {
+    if (err) {
+      if (err.code === "ENOENT") {
         // this means that the page wasn't found
         fs.readFile(path.join(__dirname, "public", "404.html"), () => {
-          response.writeHead(200, {"Content-Type": "text/html"});
+          response.writeHead(200, { "Content-Type": "text/html" });
           response.end(content, "utf8");
         });
       } else {
@@ -60,7 +64,7 @@ const server = http.createServer((request, response) => {
       }
     } else {
       // success
-      response.writeHead(200, {"Content-Type": contentType});
+      response.writeHead(200, { "Content-Type": contentType });
       response.end(content, "utf8");
     }
   });

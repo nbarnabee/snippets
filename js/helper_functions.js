@@ -73,3 +73,7 @@ array.forEach((a) => (numberOf[a] = (numberOf[a] || 0) + 1));
 const removeDupes = (arr) => arr.filter((e, i, arr) => i === arr.indexOf(e));
 
 // returns only those elements whose index position in the parent array matches the index position of their first occurrence
+
+// but there's a simpler way that I always forget:  Set!
+
+const removeDupesViaSet = (arr) => new Set(arr);

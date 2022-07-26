@@ -16,7 +16,6 @@
 
 /* a use case for ems:  connecting the size of a child inline element to its parent, particularly in the case of an icon that accompanies a heading or other text element */
 
-
 /* ideas about modular scale: 
 use line height as the basis for extrapolating values, utilizing a modular scale
 base height = line height
@@ -52,6 +51,32 @@ next step up = line height * line height * line height */
   --xl: 4rem;
 }
 
+/* And here's another variation on the theme: */
+
+:root {
+  --s-xxl: 3rem;
+  --s-xl: 2.25rem;
+  --s-large: 1.25rem;
+  --s-normal: 1rem;
+  --s-small: 0.75rem;
+  --s-xs: 0.5rem;
+}
+
+@media (min-width: 800px) {
+  :root {
+    --s-xxl: 4.5rem;
+  }
+}
+
+@media (min-width: 1000px) {
+  :root {
+    --s-xl: 3rem;
+    --s-large: 1.5rem;
+    --s-normal: 1.125rem;
+    --s-small: 1rem;
+    --s-xs: 0.75rem;
+  }
+}
 
 /* setting a standard text width */
 

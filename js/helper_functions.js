@@ -25,6 +25,7 @@ function evaluateSet(set, twoDArray) {
 }
 
 // this function is what I ended up using with my tic-tac-toe game, to see if all of the numbers from a particular array within the array of arrays could be found in the target array
+// to go deeper with multidimensional arrays, I would just need to add nested for loops
 
 function evaluateSetInsideOut(set, twoDArray) {
   for (i = 0; i < twoDArray.length; i++) {
@@ -32,9 +33,9 @@ function evaluateSetInsideOut(set, twoDArray) {
   }
 }
 
-// to go deeper with multidimensional arrays, I would just need to add nested for loops
-
 // counting occurrences of a particular value in an array
+// each element as it appears in the array is assigned as key in the aggregation object
+// each time the element appears, its value in the aggregation object is checked.  if the value exists, it is incremented by one; if not, it is added to the object
 
 const occurrenceCount = (arr) =>
   arr.reduce((count, value) => {
@@ -65,9 +66,6 @@ let countObj = A.reduce(
 let numberOf = {};
 array.forEach((a) => (numberOf[a] = (numberOf[a] || 0) + 1));
 
-// each element as it appears in the array is assigned as key in the numberOf object, with an initial value of one.
-// each time the element appears, the numberOf object is checked, and if it already exists, its value is increased by 1
-
 // removing duplicate entries from an array
 
 const removeDupes = (arr) => arr.filter((e, i, arr) => i === arr.indexOf(e));
@@ -77,3 +75,16 @@ const removeDupes = (arr) => arr.filter((e, i, arr) => i === arr.indexOf(e));
 // but there's a simpler way that I always forget:  Set!
 
 const removeDupesViaSet = (arr) => new Set(arr);
+
+// Truncating a string
+
+const truncate = function (str, len) {
+  if (str.length > len && str.length > 0) {
+    let new_str = str + " ";
+    new_str = str.substr(0, len); // Sets the string to the maximum length
+    new_str = str.substr(0, new_str.lastIndexOf(" ")); // Ends the string on a space, thus eliminating any words that got cut through
+    new_str = new_str.length > 0 ? new_str : str_substr(0, len); // If for some reason the string is now empty (like there was only a single word that got cut off), it returns to the earlier value.  The reader will just have to cope with a truncated word.
+    return new_str + "...";
+  }
+  return str;
+};

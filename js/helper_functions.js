@@ -88,3 +88,23 @@ const truncate = function (str, len) {
   }
   return str;
 };
+
+// a function to bulk-add attributes to a dynamically generated HTML element
+function setAttributes(elem, attributes) {
+  for (let entry in attributes) {
+    elem.setAttribute(entry, attributes[entry]);
+  }
+}
+
+// how you'd use it:
+let editItem = document.createElement("input");
+setAttributes(editItem, {
+  type: "image",
+  class: "edit",
+  src: "/images/pencil.svg",
+  alt: "Edit item",
+  title: "Edit item",
+});
+
+// what you'd end up with:
+// <input type = "image" class = "edit" src = "/images/pencil.svg" alt = "Edit item" title = "Edit item">

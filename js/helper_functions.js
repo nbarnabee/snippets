@@ -108,3 +108,17 @@ setAttributes(editItem, {
 
 // what you'd end up with:
 // <input type = "image" class = "edit" src = "/images/pencil.svg" alt = "Edit item" title = "Edit item">
+
+/* setting a delay on a series of items (so, for instance, if you wanted an event to fire, then a break, then the second event, then a break, etc. */
+
+const events = async (eventList) => {
+  for (let item in eventList) {
+    await delay(600);
+    console.log(item.name);
+    callbackFunction(item);
+  }
+};
+
+function delay(time) {
+  return new Promise((res) => setTimeout(res, time));
+}

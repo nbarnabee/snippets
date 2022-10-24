@@ -1,0 +1,37 @@
+.modal {
+  display: flex;
+  gap: 1rem;
+  padding: 1rem;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  width: 300px;
+  height: 150px;
+  overflow-y: auto;
+  border: 2px solid black;
+  box-shadow: 2px 2px 2px black;
+}
+
+.modal-closed {
+  transform: translateX(100vw);
+}
+
+.modal__text {
+  padding-left: 12px;
+}
+
+.modal__text > * {
+  margin-top: 1rem;
+}
+
+/*
+@media (max-width: 450px) {
+  .modal {
+    left: 5%;
+    top: 40%;
+    margin-left: 0px;
+    margin-top: 0px;
+  }
+} */

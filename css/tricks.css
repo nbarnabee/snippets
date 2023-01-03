@@ -26,3 +26,15 @@
   left: 50%;
   transform: translate(-50%, -50%);
 }
+
+/* Perfect centering via grid */
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  display: grid;
+  place-items: center;
+}

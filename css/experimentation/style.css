@@ -1,0 +1,4 @@
+.listContainer:not(:has(.list > li)) {
+  display: none;
+}
+/* Unfortunately this doesn't work in Firefox (yet) */

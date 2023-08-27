@@ -76,6 +76,15 @@ const removeDupes = (arr) => arr.filter((e, i, arr) => i === arr.indexOf(e));
 
 const removeDupesViaSet = (arr) => new Set(arr);
 
+// of course then you're stuck with a set, which isn't quite the same as an array, so probably something like this would be more useful:
+
+function removeDupesViaSetAndReturnArr(arr) {
+  const newSet = new Set(arr);
+  const dupeFreeArr = [];
+  newSet.forEach((a) => dupeFreeArr.push(a));
+  return dupeFreeArr;
+}
+
 // Truncating a string
 
 const truncate = function (str, len) {
@@ -121,4 +130,12 @@ const events = async (eventList) => {
 
 function delay(time) {
   return new Promise((res) => setTimeout(res, time));
+}
+
+// take a string with special HTML encoding, e.g. "We&#39;re unable to complete your request at this time." and return a normal text string:
+
+function decode(str) {
+  let txt = document.createElement("textarea");
+  txt.innerHTML = str;
+  return txt.value;
 }

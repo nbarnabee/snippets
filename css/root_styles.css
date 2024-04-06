@@ -12,7 +12,13 @@
   font-size: calc(1rem + 0.5vw);
 }
 
-/* the above would ensure that the font-size never drops below 1rem */
+/* Here's an even better alternative: */
+
+body {
+    font-size: calc(15px + 0.390625vw);
+}
+
+/* the first option would ensure that the font-size never drops below 1rem (default: 16px) and will produce larger sizes across the board */
 
 /* a use case for ems:  connecting the size of a child inline element to its parent, particularly in the case of an icon that accompanies a heading or other text element */
 

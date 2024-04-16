@@ -78,5 +78,5 @@ textarea:not([rows]) {
 /* Anything that has been anchored to should have extra scroll margin */
 /* Beautiful */
 :target {
-  scroll-margin-block: 5ex;
+  scroll-margin-block: 5rem;
 }
